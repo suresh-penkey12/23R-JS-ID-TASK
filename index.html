@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ID Card</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #e8f5fc; /* Light blue background for ID card theme */
+            font-family: Arial, sans-serif;
+        }
+
+        .id-card {
+            width: 320px;
+            height: 500px;
+            background: #ffffff;
+            border: 1px solid #d3d3d3;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .id-card .header {
+            width: 100%;
+            padding: 10px 0;
+            background-color: #007bff;
+            color: #ffffff;
+            border-radius: 10px 10px 0 0;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .id-card .profile-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 20px 0;
+            border: 3px solid #007bff;
+        }
+
+        .id-card .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .id-card .info {
+            margin-top: 10px;
+        }
+
+        .id-card .info h3 {
+            margin: 5px 0;
+            font-size: 1.1em;
+            color: #333333;
+        }
+
+        .id-card .info h4 {
+            margin: 5px 0;
+            font-size: 1em;
+            color: #666666;
+        }
+
+        .id-card .details {
+            width: 100%;
+            margin-top: 20px;
+            text-align: left;
+            font-size: 0.95em;
+            color: #444444;
+        }
+
+        .id-card .details h4 {
+            margin: 8px 0;
+        }
+
+        .id-card .footer {
+            width: 100%;
+            padding: 10px 0;
+            margin-top: auto;
+            background-color: #f1f1f1;
+            border-radius: 0 0 10px 10px;
+            font-size: 0.9em;
+            color: #555555;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let parent = document.createElement("div");
+        parent.classList.add("id-card");
+        parent.style.border = "2px solid"; // Override any border if needed
+        parent.style.width = "300px";
+        parent.style.backgroundColor = "lightblue";
+        document.body.append(parent);
+
+        let child1 = document.createElement("div");
+        child1.classList.add("header");
+        child1.innerHTML = "DESIGNSTACK";
+        parent.appendChild(child1);
+
+        let profileImage = document.createElement("div");
+        profileImage.classList.add("profile-image");
+        let pic1 = document.createElement("img");
+        pic1.setAttribute("src", "./download (2).jpeg");
+        profileImage.appendChild(pic1);
+        parent.appendChild(profileImage);
+
+        let child3 = document.createElement("div");
+        child3.classList.add("info");
+        let c3 = document.createElement("h3");
+        let c4 = document.createElement("h4");
+        c3.innerHTML = "JOHN MICHAEL";
+        c4.innerHTML = "Graphic Designer";
+        child3.append(c3, c4);
+        parent.appendChild(child3);
+
+        let child4 = document.createElement("div");
+        child4.classList.add("details");
+        let c5 = document.createElement("h4");
+        let c6 = document.createElement("h4");
+        let c7 = document.createElement("h4");
+        let c8 = document.createElement("h4");
+        let c9 = document.createElement("h4");
+        c5.innerHTML = "ID no: 125";
+        c6.innerHTML = "Dept: Graphic Team";
+        c7.innerHTML = "Deg: Sr. Executive";
+        c8.innerHTML = "Phone: 0123456789";
+        c9.innerHTML = "Mail: john@gmail.com";
+        child4.append(c5, c6, c7, c8, c9);
+        parent.appendChild(child4);
+
+        let footer = document.createElement("div");
+        footer.classList.add("footer");
+        footer.innerHTML = "For official use only";
+        parent.appendChild(footer);
+    </script>
+</body>
+</html>
